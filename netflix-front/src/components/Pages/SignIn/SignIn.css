@@ -1,0 +1,203 @@
+/* General Reset for the sign-in page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Sign-in page styling */
+.sign-in-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #141414;
+    position: relative;
+    background-image: url('../../../assets/netback.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Adjust logo container for correct positioning */
+.sign-in-logo {
+    display: flex;
+    justify-content: flex-start;  /* Align to the left */
+    align-items: center;          /* Vertically center logo */
+    position: absolute;           /* Positioning the logo absolutely */
+    top: 20px;                    /* Space from the top */
+    left: 20px;                   /* Space from the left */
+    margin-left: 130px;
+}
+
+/* Logo styling */
+.sign-in-logo img {
+    width: 9.5rem;
+    height: 2.5rem;               /* Maintain aspect ratio */
+    opacity: 0.8;
+}
+
+/* Sign-in container */
+.sign-in-container {
+    width: 100%;
+    max-height: 800px;
+    max-width: 450px;
+    padding: 40px 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Heading */
+.sign-in-container h1 {
+    color: white;
+    font-size: 28px;
+    margin-bottom: 30px;
+    text-align: left;
+    margin-left: 55px;
+}
+
+/* Container for input and label */
+.sign-in-input-container {
+    position: relative;
+    margin-bottom: 20px; /* Adjust spacing as needed */
+
+}
+
+/* Input field styling */
+.sign-in-input {
+    width: 300px;
+    padding: 22px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+    outline: none;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+
+/* Placeholder styling */
+.sign-in-input::placeholder {
+    color: #aaa;
+    opacity: 1; /* Ensure placeholder is fully visible */
+    transition: all 0.3s ease;
+}
+
+/* Move placeholder up and shrink when input is focused or filled */
+.sign-in-input:focus::placeholder,
+.sign-in-input:not(:placeholder-shown)::placeholder {
+    transform: translateY(-20px); /* Move placeholder up */
+    font-size: 12px; /* Shrink placeholder text */
+    color: #aaa; /* Keep placeholder color consistent */
+}
+
+/* Buttons */
+.sign-in-btn {
+    width: 300px;
+    padding: 13px;
+    margin: 10px 0;
+    background-color: #e50914;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sign-in-btn:hover {
+    background-color: #f40612;
+}
+
+/* "Or" divider */
+.sign-in-or {
+    color: #aaa;
+    font-size: 16px;
+    margin: 20px 0;
+}
+
+/* "Use a Sign-In Code" button */
+.sign-in-code button {
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    width: 300px;
+    padding: 13px;
+}
+
+.sign-in-code button:hover {
+    background-color: #444;
+}
+
+/* Forgot password link */
+.sign-in-forgot-password {
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 10px;
+    text-decoration: underline;
+}
+
+/* Remember Me checkbox */
+.sign-in-remember {
+    margin-left: 55px;
+    margin-top: 20px;
+    text-align: left;
+    font-size: 15px;
+    color: white;
+}
+
+.sign-in-remember input {
+    margin-right: 10px;
+}
+
+/* New user sign-up section */
+.sign-in-new-user {
+    margin-top: 20px;
+    font-size: 14px;
+    color: white;
+    text-align: left;
+    margin-left: 55px;
+}
+
+.sign-in-signup-link {
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Learn More section */
+.sign-in-learn-more {
+    margin-top: 20px;
+    font-size: 12px;
+    color: white;
+    margin-left: 45px;
+    margin-right: 35px;
+}
+
+.sign-in-learn-more-link {
+    color: #0071eb;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.sign-in-privacy-policy,
+.sign-in-terms-service {
+    color: #0071eb;
+    text-decoration: none;
+}
+
+.sign-in-privacy-policy:hover,
+.sign-in-terms-service:hover {
+    text-decoration: underline;
+}
