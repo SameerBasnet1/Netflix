@@ -85,15 +85,16 @@ const SignIn = () => {
                         <input
                             type="text"
                             id="email"
-                            placeholder="Email or mobile number"
+                            placeholder=" "
                             className="sign-in-input"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             onBlur={() => validateEmailOrPhone(email)}
                         />
+                        <label htmlFor="email" className="sign-in-email">Email or mobile number</label>
+                        {/* Error Message */}
+                        {error && <p className="error-message">{error}</p>}
                     </div>
-                    {/* Error Message */}
-                    {error && <p className="error-message">{error}</p>}
 
                     {/* Password Input */}
                     <div className="sign-in-input-container">
@@ -105,8 +106,9 @@ const SignIn = () => {
                             onChange={handlePasswordChange}
                             onBlur={handlePasswordBlur} // Call blur function to show the error
                             onFocus={handlePasswordFocus} // Clear error on focus
-                            placeholder="Password"
+                            placeholder=" "
                         />
+                        <label htmlFor="password" className="sign-in-password">Password</label>
                         {passwordError && <p className="error-message">{passwordError}</p>}
                     </div>
                     <div>

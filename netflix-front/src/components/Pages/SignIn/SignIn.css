@@ -84,19 +84,58 @@
 }
 
 
-/* Placeholder styling */
-.sign-in-input::placeholder {
+/*!* Placeholder styling *!*/
+/*.sign-in-input::placeholder {*/
+/*    color: #aaa;*/
+/*    opacity: 1; !* Ensure placeholder is fully visible *!*/
+/*    transition: all 0.3s ease;*/
+/*}*/
+
+/*!* Move placeholder up and shrink when input is focused or filled *!*/
+/*.sign-in-input:focus::placeholder,*/
+/*.sign-in-input:not(:placeholder-shown)::placeholder {*/
+/*    transform: translateY(-20px); !* Move placeholder up *!*/
+/*    font-size: 12px; !* Shrink placeholder text *!*/
+/*    color: #aaa; !* Keep placeholder color consistent *!*/
+/*}*/
+
+/* Label styling */
+.sign-in-email {
+    position: absolute;
+    left: 77px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* Ensure the label doesn't interfere with input clicks */
     color: #aaa;
-    opacity: 1; /* Ensure placeholder is fully visible */
+    font-size: 16px;
     transition: all 0.3s ease;
 }
 
-/* Move placeholder up and shrink when input is focused or filled */
-.sign-in-input:focus::placeholder,
-.sign-in-input:not(:placeholder-shown)::placeholder {
-    transform: translateY(-20px); /* Move placeholder up */
-    font-size: 12px; /* Shrink placeholder text */
-    color: #aaa; /* Keep placeholder color consistent */
+/* Move label up and shrink when input is focused or filled */
+.sign-in-input:focus + .sign-in-email,
+.sign-in-input:not(:placeholder-shown) + .sign-in-email {
+    transform: translateY(-30px); /* Move label up */
+    font-size: 12px; /* Shrink label text */
+    color: #aaa; /* Change label color (optional) */
+}
+
+.sign-in-password {
+    position: absolute;
+    left: 77px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* Ensure the label doesn't interfere with input clicks */
+    color: #aaa;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+/* Move label up and shrink when input is focused or filled */
+.sign-in-input:focus + .sign-in-password,
+.sign-in-input:not(:placeholder-shown) + .sign-in-password {
+    transform: translateY(-30px); /* Move label up */
+    font-size: 12px; /* Shrink label text */
+    color: #aaa; /* Change label color (optional) */
 }
 
 /* Buttons */
